@@ -4,7 +4,7 @@ html {
 
 body {
   overflow: hidden;
-  background: #2d3436 url("../img/bg.jpg") no-repeat center center fixed;
+  background: #2d3436 ;
   background-size: cover;
   position: fixed;
   padding: 0px;
