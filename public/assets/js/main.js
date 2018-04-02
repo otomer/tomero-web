@@ -1,6 +1,6 @@
 'use strict';
 
-var getPrice = () => 5.1
+var getPrice = () => 5.2
 
 var res = getPrice();;
 //var res = Number.parseFloat === parseFloat;
