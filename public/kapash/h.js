@@ -3,10 +3,11 @@
 /******************/
 var countdownElementId = "countdown";
 var currentTime = new Date();
-currentTime.setHours(15,0,0);
-var countDownDate =currentTime;
+var oneDaySeconds = 24 * 60 * 60;
+currentTime.setHours(15, 0, 0);
+var countDownDate = currentTime;
 
-var timeLeft = function(first) {
+var timeLeft = function (onStart) {
     var now = new Date().getTime();
     var distance = countDownDate - now;
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -14,13 +15,20 @@ var timeLeft = function(first) {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if (first) {
-        var secTotal = distance / 1000;
-        console.log(secTotal);
-         var coffeeElement = document.getElementsByClassName("coffee");
-         var css = "animation: coffeeGoesUp infinite forwards " + secTotal + "s linear;"
-         var css2 = "-webkit-" + css;
-         coffeeElement[0].style = css2 + css;
+    if (onStart) {
+        var onStartSecTotalLeft = distance / 1000;
+        var onStartPercentDone = ((oneDaySeconds - onStartSecTotalLeft) / oneDaySeconds) * 100;
+        console.log("On Start, Total Seconds Until " + currentTime + ": " + onStartSecTotalLeft);
+        console.log("On Start, Total Percent passed: " + Math.floor(onStartPercentDone));
+        var secondsPassedInDay = oneDaySeconds - onStartSecTotalLeft;
+
+        //CSS
+        var css = "animation: coffeeGoesUp infinite forwards " + onStartSecTotalLeft + "s linear;"
+        var css2 = "-webkit-" + css;
+        var css3 = "animation-delay: -" + secondsPassedInDay + "s !important;";
+
+        var coffeeElement = document.getElementsByClassName("coffee");
+        coffeeElement[0].style = css2 + css + css3;
     }
 
     var daysRes = days + " ימים ";
