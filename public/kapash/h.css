@@ -34,6 +34,7 @@ h4 {
   margin: 0;
   padding: 0;
 }
+
 .cup {
   border-radius: 0.5vw;
   background: beige;
@@ -48,8 +49,6 @@ h4 {
   z-index: 500;
   border-radius: 0.5vw 0.5vw 3.5vw 3.5vw;
 }
-
- 
 
 .cup:before,
 .cup:after {
@@ -111,8 +110,6 @@ h4 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d1e1e', endColorstr='#1f0000', GradientType=0);
   border-radius: 0.5vw 0.5vw 4.5vw 4.5vw;
 }
-
-
 
 @-webkit-keyframes coffeeGoesUp {
   0% {

@@ -18,14 +18,17 @@ var timeLeft = function (onStart) {
     if (onStart) {
         var onStartSecTotalLeft = distance / 1000;
         var onStartPercentDone = ((oneDaySeconds - onStartSecTotalLeft) / oneDaySeconds) * 100;
-        console.log("On Start, Total Seconds Until " + currentTime + ": " + onStartSecTotalLeft);
+        var onStartSecondsPassedInDay = oneDaySeconds - onStartSecTotalLeft;
+        
+        console.log("Seconds in one day: " + oneDaySeconds);
+        console.log("On Start, Total Seconds passed: " + onStartSecondsPassedInDay);
+        console.log("On Start, Total Seconds Until: " + onStartSecTotalLeft);
         console.log("On Start, Total Percent passed: " + Math.floor(onStartPercentDone));
-        var secondsPassedInDay = oneDaySeconds - onStartSecTotalLeft;
 
         //CSS
         var css = "animation: coffeeGoesUp infinite forwards " + onStartSecTotalLeft + "s linear;"
         var css2 = "-webkit-" + css;
-        var css3 = "animation-delay: -" + secondsPassedInDay + "s !important;";
+        var css3 = "animation-delay: -" + onStartSecondsPassedInDay + "s !important;";
 
         var coffeeElement = document.getElementsByClassName("coffee");
         coffeeElement[0].style = css2 + css + css3;
