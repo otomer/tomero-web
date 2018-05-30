@@ -6,7 +6,7 @@ var countdownElementId = "countdown";
 var targetTime = new Date();
 var ONE_DAY_SECONDS = 24 * 60 * 60;
 var now = new Date().getTime();
-targetTime.setHours(16, 0, 0);
+targetTime.setHours(15, 0, 0);
 var marginTime = targetTime - now;
 if (marginTime < 0) {
     targetTime = targetTime.addDays(1);
