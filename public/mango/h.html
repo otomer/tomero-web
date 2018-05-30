@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>H</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="h.css" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <!-- https://codepen.io/ellissei_design/pen/xwOpGW -->
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Quiz</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row row-offcanvas">
+
+            <div class="sidebar-offcanvas sidebar">
+
+
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                        <label id="lbl">
+                            <span class="glyphicon glyphicon-one-fine-dot text-danger"></span>
+                            <span class="text-status">Offline</span>
+                        </label>
+                    </div>
+                    <div class="panel-body panel-connect">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="input-group input-group-lg">
+                                        <input class="form-control" type="text" id="m" autocomplete="off" />
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-success" id="btn">Connect</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+
+                    <div class="panel-heading panel-heading-users">Users Online</div>
+                    <div class="panel-body panel-users">
+                        <img id="loading" src="../assets/img/kr_loader.gif" style="display:none;">
+                        <p id="panel-no-users">
+                            <i class="glyphicon glyphicon-remove-circle"></i> You are offline.
+                        </p>
+                        <p id="panel-users-list">
+                        </p>
+                    </div>
+                    <p id="panel-body-inner-template">
+                        <i class="glyphicon glyphicon-user"></i> #User
+                    </p>
+                </div>
+                <!--/.panel-->
+
+            </div>
+            <!-- /.cols-->
+
+            <div class="content container">
+                <p class="pull-right">
+                    <a type="button" class="btn btn-collapse btn-sm" data-toggle="offcanvas">
+                        <i class="glyphicon glyphicon-chevron-down"></i> Users Sidebar</a>
+                </p>
+
+                <div class="text-center">
+                    <h1>Bootstrap collapsible sidebar</h1>
+                    <p class="lead">Example of a page with collapsible sidebar which is hidding by default on mobile screen.
+                    </p>
+                    <button class="btn btn-success" id="s">Connect</button>
+                </div>
+
+                <div class="row row-options">
+                </div>
+
+                <div id="row-option" class="col-md-3" style="display:none">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--/.row-->
+            </div>
+            <!-- /.cols-->
+        </div>
+        <!-- /.row-->
+    </div>
+    <!-- /.container -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-duration-format/2.2.2/moment-duration-format.min.js"></script>
+    <script type="text/javascript" src="../assets/js/utils.js"></script>
+    <script type="text/javascript" src="h.js"></script>
+
+
+
+</body>
+
+</html>
