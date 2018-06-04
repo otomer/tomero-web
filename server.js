@@ -102,7 +102,9 @@ app.get("/components/amp-access/logout", function (req, res) {
   });
 });
 
-
+app.get('/kapash/h.html', function(req, res) {
+  res.redirect('/apps/kapash');
+});
 // catch 404 and forward to error handler
 app.use(function (req, res, next) { 
   console.log("\r");
