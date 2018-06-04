@@ -164,3 +164,20 @@ h4 {
 
 
 
+.circle-image {
+  border-radius: 50%;
+}
+
+.user-welcome {
+  direction: rtl;
+  color:white;
+}
+
+.user-welcome a {
+  color:white;
+}
+
+
+.user-welcome strong {
+  color:#F37272;
+}
