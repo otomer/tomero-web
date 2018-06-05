@@ -35,14 +35,20 @@ function jsonToMap(jsonStr) {
   return new Map(JSON.parse(jsonStr));
 }
 
+var printDate = function () {
+  console.info(dateFormat(Date.now(), "\ndd/mm/yyyy H:MM:ss TT"));
+};
+
 //Server static files
-app.use(express.static(__dirname + "/public", { extensions: ['html'] }));
+app.use(express.static(__dirname + "/public", {
+  extensions: ['html']
+}));
 
 //Parse application/json requests
 app.use(bodyParser.json()); // JSON encoded bodies
 app.use(bodyParser.urlencoded({
   extended: true
-})); // URL
+}));
 app.use(cors());
 
 
@@ -65,9 +71,7 @@ app.use(function (req, res, next) {
 var apiRouter = require("./src/routes/mango")();
 app.use("/api", apiRouter);
 
-var printDate = function () {
-  console.info(dateFormat(Date.now(), "\ndd/mm/yyyy H:MM:ss TT"));
-};
+
 
 //GET Requests
 app.get("/server", function (req, res) {
@@ -102,11 +106,11 @@ app.get("/components/amp-access/logout", function (req, res) {
   });
 });
 
-app.get('/kapash/h.html', function(req, res) {
+app.get('/kapash/h.html', function (req, res) {
   res.redirect('/apps/kapash');
 });
 // catch 404 and forward to error handler
-app.use(function (req, res, next) { 
+app.use(function (req, res, next) {
   console.log("\r");
   var d = dateFormat(Date.now(), "dd/mm/yyyy H:MM:ss TT");
   console.log(d + ": " + req.method + " " + req.url);

@@ -12,7 +12,7 @@ h1 {
   font-weight: 700;
   /* color: beige; */
   color: #c9dbdc;
-  margin-bottom: 0;
+  margin:0;
 }
 
 h2 {
@@ -26,7 +26,7 @@ h2 {
 
 h4 {
   text-align: center;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   color: #c9dbdc;
   margin: 0;
@@ -59,18 +59,18 @@ h4 {
 }
 
 .cup:before {
-  width: 5vw;
-  height: 5vw;
-  top: 4vw;
-  left: -3.57142857vw;
+  width: 42px;
+  height:52px;
+  top: 40px;
+  left: -39px;
 }
 
 .cup:after {
   background: #362D26;
-  width: 2.56410256vw;
-  height: 3.33333333vw;
-  top: 4.85714286vw;
-  left: -2.77777778vw;
+  width: 27px;
+    height: 34px;
+  top: 49px;
+  left: -29px;
 }
 
 .ribbon {
@@ -180,4 +180,14 @@ h4 {
 
 .user-welcome strong {
   color:#F37272;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .content_inner {
+    height: 50%;
+    overflow-y: auto;
+    padding: 50px 10%;
+}
 }
